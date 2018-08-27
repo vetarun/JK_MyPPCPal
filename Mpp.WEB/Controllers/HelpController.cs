@@ -9,7 +9,7 @@ namespace Mpp.WEB.Controllers
     [Authorize]
     public class HelpController : Controller
     {
-        // GET: Help
+        // GET: Help//Test 
         public ActionResult Index()
         {
             return View();
