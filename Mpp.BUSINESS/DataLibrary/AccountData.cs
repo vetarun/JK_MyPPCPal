@@ -954,6 +954,20 @@ namespace Mpp.BUSINESS.DataLibrary
             }
             return res;
         }
+        public static DataTable GetUserDetails(int userId)
+        {
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "select MppUserID,PlanID,Email,SbPassword,FirstName,LastName,Active,SellerName,SellerAccess,StartDate,TrailEndDate,PlanStatus,"+
+                              "Code,IsAccountLocked,IsSetFormula,RetryCount,LoginAttemptDate,ModifiedOn,ModifiedBy,CreatedOn,stp_custId,stp_cardId,Affiliation_Id,"+
+                              "IsAgreementConfirm,BulkAccess,NegAccess,DataImportAlert,AccessLimitAlert,SevenDayTrialAlert,TrialEndAlert,ActivationEmailAlert,IsArchive,"+
+                              "AccessToken,RefreshToken,TokenType,AccessTokenUpdatedOn,TokenExpiresIn,sellerStringId,ProfileId,ProfileAccess,IsArchiveOn,PlanUpdatedOn "+
+                              "from MppUser where MppUserID=@userId";
+            cmd.Parameters.Add("@userId", SqlDbType.Int).Value = userId;
+            dt=DataAccess.GetTable(cmd);
+            return dt;
+        }
+
         #endregion
 
         #region Private Methods

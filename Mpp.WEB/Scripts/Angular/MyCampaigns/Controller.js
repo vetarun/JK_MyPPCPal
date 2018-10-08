@@ -238,7 +238,7 @@
                             CmpData.then(function (res) {
                                 
                                 var result = res.data;
-                                if (result == "") {
+                                if (result == "1") {
                                     msg = "Updated Successfully!";
                                     $scope.modalspinner = false;
                                     displayMsg(msg, 1);
@@ -251,6 +251,11 @@
                                         }
                                     }
                                     setTempFormula(formula);
+                                }
+                                else if (result == "-1") {
+                                    msg = "You are not eligible to update, Please contact to admin!";
+                                    $scope.modalspinner = false;
+                                    displayMsg(msg, 1);
                                 }
                                 else {
                                     $scope.modalspinner = false;

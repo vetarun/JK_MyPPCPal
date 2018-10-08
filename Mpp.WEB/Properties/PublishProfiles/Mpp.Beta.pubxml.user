@@ -102,22 +102,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2018 16:06:44</publishTime>
     </File>
     <File Include="bin/Mpp.BUSINESS.dll">
-      <publishTime>08/16/2018 19:42:53</publishTime>
+      <publishTime>08/28/2018 18:05:39</publishTime>
     </File>
     <File Include="bin/Mpp.BUSINESS.pdb">
-      <publishTime>08/16/2018 19:42:53</publishTime>
+      <publishTime>08/28/2018 18:05:39</publishTime>
     </File>
     <File Include="bin/Mpp.UTILITIES.dll">
-      <publishTime>08/16/2018 19:42:51</publishTime>
+      <publishTime>08/28/2018 18:05:38</publishTime>
     </File>
     <File Include="bin/Mpp.UTILITIES.pdb">
-      <publishTime>08/16/2018 19:42:51</publishTime>
+      <publishTime>08/28/2018 18:05:38</publishTime>
     </File>
     <File Include="bin/Mpp.WEB.dll">
-      <publishTime>08/16/2018 19:42:59</publishTime>
+      <publishTime>08/28/2018 18:05:43</publishTime>
     </File>
     <File Include="bin/Mpp.WEB.pdb">
-      <publishTime>08/16/2018 19:42:59</publishTime>
+      <publishTime>08/28/2018 18:05:43</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>07/30/2018 16:06:45</publishTime>
@@ -462,7 +462,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/10/2018 17:01:39</publishTime>
     </File>
     <File Include="Scripts/Angular/Admin/DashboardController.js">
-      <publishTime>07/30/2018 16:06:39</publishTime>
+      <publishTime>08/27/2018 14:05:43</publishTime>
     </File>
     <File Include="Scripts/Angular/Admin/directive.js">
       <publishTime>07/30/2018 16:06:39</publishTime>
@@ -498,7 +498,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2018 16:06:39</publishTime>
     </File>
     <File Include="Scripts/Angular/MyCampaigns/Controller.js">
-      <publishTime>07/30/2018 16:06:39</publishTime>
+      <publishTime>08/28/2018 17:52:40</publishTime>
     </File>
     <File Include="Scripts/Angular/MyCampaigns/Directives.js">
       <publishTime>07/30/2018 16:06:39</publishTime>
@@ -714,7 +714,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2018 16:06:39</publishTime>
     </File>
     <File Include="Views/Main/Dashboard.cshtml">
-      <publishTime>08/13/2018 17:05:27</publishTime>
+      <publishTime>08/27/2018 18:35:49</publishTime>
     </File>
     <File Include="Views/MyCampaigns/ViewMyCampaigns.cshtml">
       <publishTime>07/30/2018 16:06:39</publishTime>
@@ -822,7 +822,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2018 16:06:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/16/2018 19:43:00</publishTime>
+      <publishTime>08/28/2018 18:05:43</publishTime>
     </File>
   </ItemGroup>
 </Project>

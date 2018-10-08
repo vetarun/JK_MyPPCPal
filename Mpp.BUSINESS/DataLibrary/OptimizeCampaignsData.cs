@@ -102,7 +102,10 @@ namespace Mpp.BUSINESS.DataLibrary
                 cmd.Parameters.Add("@isBestSrch", SqlDbType.Bit).Value = fm.IsBestSrchCheked;
                 cmd.Parameters.Add("@bestSrchAcos", SqlDbType.VarChar).Value = fm.BestSearchACos;
                 cmd.Parameters.Add("@bestSrchImpression", SqlDbType.VarChar).Value = fm.BestSearchImpressons;
+                cmd.Parameters.Add("@retunValue", SqlDbType.Int);
+                cmd.Parameters["@retunValue"].Direction = ParameterDirection.Output;
                 DataAccess.ExecuteCommand(cmd);
+                msg = Convert.ToString(cmd.Parameters["@retunValue"].Value);
             }
 
 

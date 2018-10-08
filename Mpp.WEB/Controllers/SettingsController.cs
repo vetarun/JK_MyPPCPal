@@ -389,10 +389,35 @@ namespace Mpp.WEB.Controllers
         //GET: Statements
         public ActionResult Statements()
         {
+            List<StatementViewModel> statements = new List<StatementViewModel>();
+
+            // To check user exist or not if exist then check codition is user active/IsArchive/profileAccess i.e expire/deleted/not access By Tarun 29-8-2018
+            Boolean IsAllowToDowload = true;
+            var userData= AccountData.GetUserDetails(SessionData.UserID);
+            if (userData.Rows.Count > 0)
+            {
+                DataRow dr = userData.Rows[0];
+                if (Convert.ToBoolean(dr["Active"]) == false)
+                    IsAllowToDowload = false;
+                else if (Convert.ToBoolean(dr["IsArchive"]) == true)
+                    IsAllowToDowload = false;
+                else if (Convert.ToInt32(dr["ProfileAccess"]) == 0)
+                    IsAllowToDowload = false;
+                else if (Convert.ToBoolean(dr["IsAccountLocked"]) == true)
+                    IsAllowToDowload = false;
+            }
+            else
+                IsAllowToDowload = false;
+
+
+           if (!IsAllowToDowload)
+                return View(statements);
+            //End 29-8-2018
+
             //StripeServices.RenewTrailPlan();
             var invoices = StripeHelper.GetInvoices(SessionData.StripeCustId);
             //var customer = StripeHelper.GetStripeCustomer(SessionData.StripeCustId);
-            List<StatementViewModel> statements = new List<StatementViewModel>();
+         
             //var charges = StripeHelper.GetCharges(SessionData.StripeCustId);
             var timeZone = TimeZoneInfo.FindSystemTimeZoneById("Pacific Standard Time");
             if (invoices != null && invoices.Count > 0)

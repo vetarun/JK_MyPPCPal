@@ -2,7 +2,6 @@
 @{
     ViewBag.Title = "GetCodesByAffiliate";
     Layout = "~/Areas/Admin/Views/Shared/_AffiliateLayout.cshtml";
-   
 }
 
 <style>
@@ -148,10 +147,10 @@
                             <label class="" style="border:none !important">Payoff Type:</label>
                             <div class="input-group">
                                 <label class="radio-inline" style="width:75px;">
-                                    <input type="radio" name="payradio" ng-model="PayoffType" ng-value="0">Amount
+                                    <input type="radio" name="payradio" disabled ng-model="PayoffType" ng-value="0">Amount
                                 </label>
                                 <label class="radio-inline" style="width:85px;">
-                                    <input type="radio" name="payradio" ng-model="PayoffType" ng-value="1">Percentile
+                                    <input type="radio" name="payradio" ng-model="PayoffType=1" ng-value="1">Percentile
                                 </label>
                             </div>
                         </div>
@@ -169,10 +168,11 @@
                         <div ng-if="PayoffType==1">
                             <label class="" style="border:none !important">Percent off (%):</label>
                             <div class="input-group">
-                                <input type="text" name="txtpercent" allow-Only-Numbers ng-min="{{min}}" ng-max="{{max}}" ng-model="Affiliation.Percent" ng-class="{submitted:submitted}" class="form-control" numbers-only required>
+                                <!--ng-max="{{max}}"-->
+                                <input type="text" name="txtpercent" allow-Only-Numbers ng-min="{{min}}" ng-max="{{30}}" ng-model="Affiliation.Percent" ng-class="{submitted:submitted}" class="form-control" numbers-only required>
                                 <div ng-messages="fmcode.txtpercent.$error" style="color: #ff0000" role="alert" ng-if="fmcode.txtpercent.$dirty || submitted">
-                                    <div ng-message="belowminimum">Must be between {{min}} and {{max}}.</div>
-                                    <div ng-message="abovemaximum">Must be between {{min}} and {{max}}.</div>
+                                    <div ng-message="belowminimum">Must be between {{min}} and {{30}}.</div>
+                                    <div ng-message="abovemaximum">Must be between {{min}} and {{30}}.</div>
                                     <div ng-message="nonnumeric">Enter an integer.</div>
                                     <div ng-message="required">This field is required.</div> @*It should be last since the value is always empty*@
                                 </div>
